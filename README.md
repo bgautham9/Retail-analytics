@@ -49,6 +49,26 @@ Identified issues include:
 
 ---
 
+## Project Workflow
+
+Raw Data
+→ Data Auditing
+→ Power Query Cleaning
+→ Data Modeling
+→ DAX Measures
+→ Dashboarding
+→ Business Insights
+
+## Realistic Data Challenges Simulated
+
+- inconsistent region/state naming
+- duplicate transactions
+- invalid discounts
+- mixed date formats
+- missing values
+- inconsistent city names
+- data quality issues
+
 ## Project Status
 
 🚧 In Progress

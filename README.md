@@ -1,74 +1,220 @@
-# Retail Analytics Power BI Project
+# Retail Analytics End-to-End Project (Power BI)
 
 ## Project Overview
+This project simulates a real-world retail analytics workflow using messy business data and Power BI.
 
-This project simulates a real-world retail analytics scenario using messy business data.
+The focus of this project is not just dashboard creation, but understanding how raw business data is cleaned, validated, standardized, and prepared before analysis.
 
-The goal is to build an end-to-end Power BI analytics solution starting from raw datasets and progressing through:
-- data auditing
-- data cleaning
-- transformation
-- modeling
-- DAX calculations
-- dashboarding
-- business insights
+The dataset intentionally contains:
+- inconsistent category values
+- mixed casing
+- hidden formatting issues
+- invalid business values
+- duplicate-like records
+- inconsistent region naming
 
----
-
-## Current Phase
-
-### Data Auditing & Quality Assessment
-
-Identified issues include:
-- inconsistent region/state naming
-- invalid discounts
-- duplicate records
-- missing values
-- mixed date formats
-- inconsistent categories and segments
+This project is being built step-by-step to simulate actual analyst workflow in enterprise environments.
 
 ---
 
-## Project Structure
+# Project Goals
 
-- raw_data → original datasets
-- processed_data → cleaned datasets
-- powerbi → Power BI files
-- screenshots → project screenshots
-- business_notes → audit findings and assumptions
+- Perform realistic data cleaning using Power Query
+- Handle business data inconsistencies
+- Validate numerical and categorical fields
+- Build repeatable transformation workflows
+- Create an end-to-end analytics project
+- Document analyst decisions and challenges
+- Build professional Power BI portfolio project
 
 ---
 
-## Tools Used
+# Tools Used
 
-- Power BI
+- Power BI Desktop
 - Power Query
-- Excel
-- DAX
 - GitHub
+- CSV Files
 
 ---
 
-## Project Workflow
+# Dataset Structure
 
-Raw Data
-→ Data Auditing
-→ Power Query Cleaning
-→ Data Modeling
-→ DAX Measures
-→ Dashboarding
-→ Business Insights
+## Raw Monthly Files
+- orders_jan.csv
+- orders_feb.csv
+- orders_mar.csv
 
-## Realistic Data Challenges Simulated
+## Master Dataset
+- full_company_dataset.csv
 
-- inconsistent region/state naming
-- duplicate transactions
-- invalid discounts
-- mixed date formats
-- missing values
-- inconsistent city names
-- data quality issues
+---
 
-## Project Status
+# Current Progress
 
-🚧 In Progress
+## Phase 1 — Data Audit
+Completed:
+- reviewed raw datasets
+- identified inconsistencies
+- documented data quality issues
+- created project folder structure
+- uploaded raw files to GitHub
+
+---
+
+## Phase 2 — Data Cleaning & Standardization
+Completed using Power Query:
+
+### Data Consolidation
+- appended monthly CSV files into one combined dataset
+- validated schema consistency across files
+
+### Data Profiling
+Enabled:
+- Column Quality
+- Column Distribution
+- Column Profile
+
+Used profiling to identify:
+- invalid values
+- hidden inconsistencies
+- duplicate categories
+- business anomalies
+
+---
+
+# Cleaning Tasks Completed
+
+## Region Standardization
+Fixed inconsistencies like:
+- East
+- east
+- EAST
+- Est
+
+Final standardized regions:
+- East
+- West
+- South
+- Central
+
+---
+
+## Category Standardization
+Fixed inconsistent values like:
+- tech
+- Tech
+- Officesupply
+- Furnitureiture
+
+Final standardized categories:
+- Furniture
+- Office Supplies
+- Technology
+
+---
+
+## Segment Standardization
+Standardized:
+- Consumer
+- Corporate
+- Home Office
+
+Handled hidden blank values affecting distinct counts.
+
+---
+
+## Data Cleaning Transformations Used
+
+Applied:
+- Trim
+- Clean
+- Capitalize Each Word
+- Replace Values
+- Filter Rows
+
+---
+
+## Discount Validation
+
+Identified invalid business values:
+- negative discounts
+- discounts above 100%
+
+Applied business rule filtering:
+- kept only discount values between 0 and 1
+
+---
+
+# Real-World Challenges Faced
+
+## Hidden Formatting Issues
+Some values looked identical visually but contained:
+- trailing spaces
+- hidden characters
+- formatting inconsistencies
+
+Resolved using:
+- Trim
+- Clean transformations
+
+---
+
+## Transformation Side Effects
+While replacing category values:
+Furniture → Furnitureiture
+
+This highlighted the importance of validating transformations carefully after every replacement operation.
+
+---
+
+## Profiling Limitations
+Power Query profiling initially analyzed only top 1000 rows, causing misleading distinct counts.
+
+Resolved by switching profiling to:
+- entire dataset analysis
+
+---
+
+# Key Learning
+
+One of the biggest learnings from this project:
+
+Good dashboards depend on trusted and standardized data.
+
+Most analytics effort happens before visualization.
+
+---
+
+# Next Steps
+
+Upcoming phases:
+- Sales and Profit validation
+- Date standardization
+- Duplicate handling
+- Data modeling
+- DAX measures
+- KPI dashboards
+- Business insights generation
+
+---
+
+# Repository Structure
+
+```text
+Retail-Analytics
+│
+├── raw_data
+│   ├── orders_jan.csv
+│   ├── orders_feb.csv
+│   ├── orders_mar.csv
+│
+├── processed_data
+│
+├── screenshots
+│
+├── business_notes
+│
+├── powerbi
+│
+└── README.md

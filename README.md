@@ -175,6 +175,13 @@ Resolved by switching profiling to:
 - entire dataset analysis
 
 ---
+Phase 3 — Transaction Validation & Date Handling
+
+sales validation
+quantity filtering
+negative profit analysis
+date parsing issue
+business-rule validation
 
 # Key Learning
 
@@ -189,9 +196,7 @@ Most analytics effort happens before visualization.
 # Next Steps
 
 Upcoming phases:
-- Sales and Profit validation
-- Date standardization
-- Duplicate handling
+
 - Data modeling
 - DAX measures
 - KPI dashboards
